@@ -16,8 +16,18 @@ class MainActivity : AppCompatActivity() {
             val teksSatu = satu.text.toString().trim()
             val teksDua = dua.text.toString().trim()
             val jumlah: Int? = jumlahView.text as Int?
-            // TODO-02: validasi kedua String tidak kosong; beri error dan hentikan proses
-            // TODO-03: validasi Int dalam rentang 1..10; beri error dan hentikan proses
+            if (teksSatu.isEmpty()){
+                satu.error = "Name Required!"
+            } else if (teksDua.isEmpty()){
+                dua.error = "Name event Required!"
+            } else {
+                if (jumlah!! >= 10) {
+                    jumlahView.error = "Isi hanya dengan 1 sampai 10"
+                } else {
+
+                }
+            }
+
             val tarif: Int = 75000
             val total: Int = 0 // FIXME-04: hitung dengan operasi perkalian Int
             // TODO-05: buat Explicit Intent menuju ResultActivity
