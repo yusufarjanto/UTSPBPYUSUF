@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
             val teksSatu = satu.text.toString().trim()
             val teksDua = dua.text.toString().trim()
             val jumlah: Int? = jumlahView.text as Int?
+            val tarif: Int = 75000
+            var total: Int = 0
             if (teksSatu.isEmpty()){
                 satu.error = "Name Required!"
             } else if (teksDua.isEmpty()){
@@ -24,12 +26,14 @@ class MainActivity : AppCompatActivity() {
                 if (jumlah!! >= 10) {
                     jumlahView.error = "Isi hanya dengan 1 sampai 10"
                 } else {
-
+                    total = jumlah * tarif
                 }
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("EXTRA_NAME",teksSatu)
+                intent.putExtra("EXTRA_EVENT",teksDua)
+                intent.putExtra("EXTRA_JUMLAH",jumlah)
+                intent.putExtra("EXTRA_TOTAL",total)
             }
-
-            val tarif: Int = 75000
-            val total: Int = 0 // FIXME-04: hitung dengan operasi perkalian Int
             // TODO-05: buat Explicit Intent menuju ResultActivity
             // TODO-06: kirim teksSatu sebagai String
             // TODO-07: kirim teksDua sebagai String
