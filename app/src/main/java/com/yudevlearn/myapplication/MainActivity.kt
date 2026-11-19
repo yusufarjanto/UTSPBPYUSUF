@@ -35,12 +35,6 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("EXTRA_TOTAL",total)
                 startActivity(intent)
             }
-            // TODO-05: buat Explicit Intent menuju ResultActivity
-            // TODO-06: kirim teksSatu sebagai String
-            // TODO-07: kirim teksDua sebagai String
-            // TODO-08: kirim jumlah sebagai Int
-            // TODO-09: kirim total sebagai Int
-            // TODO-10: buka Activity tujuan
         }
     }
 }
