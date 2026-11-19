@@ -6,18 +6,18 @@
     android:padding="24dp">
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EVENT REGISTRATION" android:textSize="22sp" />
+        android:text="@string/event_registration" android:textSize="22sp" />
     <EditText android:id="@+id/etSatu"
         android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:hint="Nama Peserta" />
+        android:hint="@string/nama_peserta" />
     <EditText android:id="@+id/etDua"
         android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:hint="Nama Event" />
+        android:hint="@string/nama_event" />
     <EditText android:id="@+id/etJumlah"
         android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:hint="Jumlah Tiket"
+        android:hint="@string/jumlah_tiket"
         android:inputType="number" />
     <Button android:id="@+id/btnHitung"
         android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="Hitung dan Lihat Hasil" />
+        android:text="@string/hitung_dan_lihat_hasil" />
 </LinearLayout>
