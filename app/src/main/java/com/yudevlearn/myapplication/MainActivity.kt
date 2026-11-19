@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("EXTRA_EVENT",teksDua)
                 intent.putExtra("EXTRA_JUMLAH",jumlah)
                 intent.putExtra("EXTRA_TOTAL",total)
+                startActivity(intent)
             }
             // TODO-05: buat Explicit Intent menuju ResultActivity
             // TODO-06: kirim teksSatu sebagai String
